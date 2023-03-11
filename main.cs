@@ -4,8 +4,11 @@ using System.CommandLine;
 using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
 
-namespace mst
+namespace mcst
 {
+    /// <summary>
+    /// Main fun and read Command
+    /// </summary>
     class ProgramMain
     {
         static async Task Main(string[] args)

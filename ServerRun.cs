@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace mst
+namespace mcst
 {
     public class ServerRun
     {
@@ -14,6 +14,7 @@ namespace mst
             public string CoreName;
             public string Jre;
             public string JreParm;
+            public string McParm;
         }
 
         public struct CommandOption
@@ -29,13 +30,22 @@ namespace mst
             public string ?JVMPara;
         }
 
+        private static CommandOption ConfigFile;
+
         private static StartConfig GetStartConfig(CommandOption commandOption)
         {
             StartConfig config = new();
             config.ServerName = commandOption.Name;
             if(commandOption.Jre is null)
             {
-                config.Jre =  MstConfig.DefaultJre;
+                if(ConfigFile.Jre is null)
+                {
+                    config.Jre = MstConfig.DefaultJre;
+                }
+                else
+                {
+                    config.Jre = ConfigFile.Jre;
+                }
             }
             else
             {
@@ -45,12 +55,52 @@ namespace mst
             if(commandOption.DisDefJVMPare)
             {
                 if(commandOption.JVMPara is null)
-                    Console.WriteLine("Error:You must to set JVM parameter or enable default parameter");
+                {
+                    ToolFun.ErrorExit("Error:You must to set JVM parameter or enable default parameter");
+                }
             }
             else
             {
                 config.JreParm = MstConfig.DefaultJVMPrameper + commandOption.JVMPara;
             }
+
+            if(commandOption.MaxMem is not null)
+            {
+                config.JreParm += commandOption.MaxMem;
+            }
+            else
+            {
+                if(ConfigFile.MaxMem is null)
+                {
+                    ToolFun.ErrorExit("Error: Don't have MaxMem");
+                }
+                else
+                {
+                    config.JreParm += ConfigFile.MaxMem;
+                }
+            }
+            
+            if(commandOption.MinMem is null)
+            {
+                if(ConfigFile.MinMem is null)
+                {
+                    ToolFun.ErrorExit("Error: Don't have MinMem");
+                }
+                else
+                {
+                    config.JreParm += ConfigFile.MinMem;
+                }
+            }
+            else
+            {
+                config.JreParm += commandOption.MinMem;
+            }
+
+            if(!commandOption.UseGUI)
+            {
+                config.McParm += "nogui";
+            }
+
             return config;
         }
 

@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "c:\\mcst\\mst.csproj": {}
+    "D:\\mcst\\mst.csproj": {}
   },
   "projects": {
-    "c:\\mcst\\mst.csproj": {
+    "D:\\mcst\\mst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\mcst\\mst.csproj",
+        "projectUniqueName": "D:\\mcst\\mst.csproj",
         "projectName": "mst",
-        "projectPath": "c:\\mcst\\mst.csproj",
-        "packagesPath": "C:\\Users\\马骏\\.nuget\\packages\\",
-        "outputPath": "c:\\mcst\\obj\\",
+        "projectPath": "D:\\mcst\\mst.csproj",
+        "packagesPath": "C:\\Users\\heero\\.nuget\\packages\\",
+        "outputPath": "D:\\mcst\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\马骏\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\heero\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Nuget本地": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +39,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "System.CommandLine": {
               "target": "Package",
               "version": "[2.0.0-beta4.22272.1, )"

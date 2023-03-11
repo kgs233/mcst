@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "dxvqxGYxxGNE1K9WPShZ1THs6KuqV5A3tivgwt40zG23yBPZiEkLNYXMZRusbOtxR++/Ucf0B0o35/UUWa/nfQ==",
+  "dgSpecHash": "fb5whtHqTTiV/raz52pIcEfYw3bF7Js+9PKy8YQ+jyskxIrIe3bv7+8htQh/izyXjhra+W+Qgh3H2MPNHcz0pg==",
   "success": true,
-  "projectFilePath": "c:\\mcst\\mst.csproj",
+  "projectFilePath": "D:\\mcst\\mcst.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\马骏\\.nuget\\packages\\system.commandline\\2.0.0-beta4.22272.1\\system.commandline.2.0.0-beta4.22272.1.nupkg.sha512"
+    "C:\\Users\\heero\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
+    "C:\\Users\\heero\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\heero\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\heero\\.nuget\\packages\\system.commandline\\2.0.0-beta4.22272.1\\system.commandline.2.0.0-beta4.22272.1.nupkg.sha512"
   ],
   "logs": []
 }
